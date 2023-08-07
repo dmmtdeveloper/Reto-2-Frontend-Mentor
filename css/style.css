@@ -23,6 +23,7 @@ body{
     --font-size-nav:14px;
 
     /* text */
+    --color-grey-placeholder:rgb(199, 196, 196);
     --color-White: hsl(0, 0%, 100%);
 
     /* primary */
@@ -157,6 +158,8 @@ body{
 }
 
 .main__container{
+    width: 80%;
+    margin: 0 auto;
     padding-top: 2em;
 }
 
@@ -240,3 +243,145 @@ body{
     font-size: 0.8em;
     color: var(--color-White);
 }
+
+.main__container--iva{
+    padding-bottom: 8em;
+}
+
+.main__getEarly{
+    margin: 0 auto;
+}
+
+.main__section--get{
+    background: var(--intro-and-email-sign-up-background);
+    padding: 1em;
+
+}
+
+.main__title{
+    padding-top: 1em;
+    color: var(--color-White);
+    text-align: center;
+}
+
+.main__paragraph--inputs{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main__inputs{
+    padding-top: 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main__input{
+    font-weight: 500;
+    outline: none;
+    padding: 1.5em 2em;
+    border-radius: 3em;
+}
+
+.main__input::placeholder{
+    color: var(--color-grey-placeholder);
+}
+
+.main__button{
+    display: inline-block;
+    font-family: var(--font-family-Headings-cta-Hero);
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: var(--color-White);
+    background-color: var(--Cyan-inside-call-to-action-gradient);
+    margin-top: 2em;
+    padding: 1.5em 4em;
+    border-radius: 3em;
+}
+
+/* footer */
+.footer{
+    padding-top: 4em;
+    min-height: 100vh;
+    background-color: var(--background-main);   
+}
+
+.footer__logo{
+    display: block;
+}
+
+.footer__items{
+    padding-top: 2em;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    gap: 2em;
+}
+
+.footer__contact--flex{
+    display: flex;
+    display: grid;
+    align-items: top;
+}
+
+.footer__paragraph{
+    color: var(--color-White);
+    padding-left: 2em;
+}
+
+.footer__icon{
+    position: absolute;
+    color: var(--color-White);
+    display: block;
+    width: 20px;
+}
+
+.footer__contact--phone::after{
+    position: relative;
+    text-align: center;
+    padding-left: 2em;
+    color: var(--color-White);
+    content: "+1-543-123-4567";
+}
+
+.footer__contact--email::after{
+    position: relative;
+    text-align: center;
+    padding-left: 1em;
+    color: var(--color-White);
+    content: "example@fylo.com";
+}
+.footer__text{
+    padding-top: 2em;
+    color: var(--color-White);
+}
+
+.footer__aboutUs{
+    padding-bottom: 1em;
+    font-size: 1.2em;
+}
+
+
+.footer__social{
+    display: flex;
+    align-items: center;
+    padding-top: 5em;
+}
+
+
+.footer__links{
+    margin: 0 auto;
+    border: 1px solid white;
+    border-radius: 5em;
+    display: inline-block;
+}
+
+.footer__redes{
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0.5em;
+}
+
