@@ -12,6 +12,7 @@
 body{
     font-family: 'Raleway', sans-serif;
     font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(hsl(176, 68%, 64%));
 }
 
 :root{
@@ -25,7 +26,7 @@ body{
     --color-White: hsl(0, 0%, 100%);
 
     /* primary */
-    --intro-and-email-sign-up-background: hsl(217, 28%, 15%);
+    --intro-and-email-sign-up-background:  hsl(217, 28%, 15%);
     --background-main:hsl(218, 28%, 13%);
     --background-footer:hsl(216, 53%, 9%);
     --testimonials-background:hsl(219, 30%, 18%);
@@ -114,15 +115,10 @@ body{
     display: inline-block;
     color: var(--color-White);
     color: var(--color-White);
-    background: var(--Cyan-inside-call-to-action-gradient);
+    background: var(--Blue-inside-call-to-action-gradient) ;
     padding: 1em 4em;
     border-radius: 2em;
     margin-bottom: 3em;
-}
-
-.hero__main{
-    display: flex;
-    flex-direction: column;
 }
 
 .hero__icon{
@@ -132,23 +128,115 @@ body{
     display: block;
 }
 
+
+.hero__main{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .hero__subtitle{
+    font-size: 1.3em;
+    padding-top: 2em;
+    color: var(--color-White);
+    text-align: center;
+}
+
+
+
+/* main */
+
+.main{
+    min-height: 100vh;
+    background-color: var(--background-main);   
+}
+
+.main__productive{
+    padding-top: 6em;
+    padding-bottom: 6em;
+}
+
+.main__container{
+    padding-top: 2em;
+}
+
+.main__stay{
+    width: 100%;
+}
+
+.main__paragraph{
+    color: var(--color-White);
+    padding-top: 1em;
+    text-align: left;
+    font-weight: 300;
+}
+
+.main__cta{
+    display: inline-block;
+    padding-top: 1em;
+    font-weight: 300;
+    color: var(--Cyan-inside-call-to-action-gradient);
+}
+
+.main__cta::before{
+    content: "";
+}
+
+.main__subtitle{
     font-size: 1.3em;
     padding-top: 1em;
     color: var(--color-White);
     text-align: center;
 }
 
-.hero__stay{
-    width: 100%;
-}
-.hero__paragraph--stay{
-    text-align: left;
+.main__items {
+    position: relative;
+    background: var(--intro-and-email-sign-up-background);
+    border-radius: 0.5em;
+    padding: 1em;
 }
 
-.hero__cta{
-    padding-top: 1em;
+
+.main__items--left::after{
+    margin-top: 6em;
+    position: absolute;
+    content: url(/images/bg-quotes.png);
+    background-repeat: no-repeat;
+    top: -140px;
+    left: 0;
+}
+
+
+.main__paragraph--left{
+    line-height: 2em;
+    padding-bottom: 2em;
+}
+
+.main__item{
+ display: flex;
+}
+
+.main__icon{
+    border-radius: 100%;
+    width: 2.5em;
+    display: block;
+}
+
+.main__text{
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+.main__name{
+    letter-spacing:0.1em ;
+    font-weight:500;
+    font-size: 1em;
+    color: var(--color-White);
+}
+
+.main__founder{
+    padding-top: 0.3em;
     font-weight: 300;
-    color: var(--Cyan-inside-call-to-action-gradient);
+    font-size: 0.8em;
+    color: var(--color-White);
 }
-
