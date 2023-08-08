@@ -96,7 +96,7 @@ body {
 .hero__img {
     margin: 0 auto;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
     display: block;
     max-width: 600px;
@@ -113,16 +113,17 @@ body {
 .hero__paragraph {
     line-height: 1.5;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 1em;
     margin-top: 1em;
     color: var(--color-White);
     font-weight: 300;
 }
 
-.hero__icon {
+.cards__icon {
     margin: 0 auto;
     width: 25%;
-    max-width: 90px;
+    width: 90px;
+    height: 90px;
     display: block;
 }
 
@@ -164,7 +165,6 @@ body {
 
 .cards__title {
     font-family: var(--font-family-Headings);
-    margin-bottom: 1em;
 }
 
 .cards__paragraph{
@@ -184,7 +184,7 @@ body {
     display: block;
     margin: 0 auto;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
 }
 
 .about__text {
@@ -331,33 +331,45 @@ body {
 /* ---------------------footer ---------------------*/
 
 .footer {
-    display: grid;
-    padding-top: 4em;
-    min-height: 100vh;
+    color: var(--color-White);
     background-color: var(--blue-footer);
+    display: grid;
 }
 
-.footer__logo {
+.footer__picture{
+    width: 200px;
+    margin-bottom: 2.5em;
+}
+
+.footer__img {
+    width: 100%;
     display: block;
 }
 
-.footer__items {
+.footer__contact {
+    padding-bottom: 1em;
+}
+
+.footer__content {
     padding-top: 2em;
     display: grid;
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    gap: 2em;
+    gap: 1em;
 }
 
-.footer__contact--flex {
+
+.footer__direction{
+    cursor: pointer;
     display: flex;
-    display: grid;
-    align-items: top;
+    flex-direction: column;
+    gap: 2em;
+    align-items: flex-start;
 }
 
-.footer__paragraph {
-    color: var(--color-White);
+.footer__direction::before{
+    content: "example@fylo.com";
     padding-left: 2em;
 }
 
@@ -366,56 +378,153 @@ body {
     color: var(--color-White);
     display: block;
     width: 20px;
+    max-width: 20px;
 }
 
-.footer__contact--phone::after {
-    position: relative;
-    text-align: center;
+.footer__direction--first::before{
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore";
     padding-left: 2em;
-    color: var(--color-White);
+}
+
+.footer__direction--second{
+    margin: 2em 0;
+}
+
+.footer__direction--second::before{
     content: "+1-543-123-4567";
+    padding-left: 2em;
 }
 
-.footer__contact--email::after {
-    position: relative;
-    text-align: center;
-    padding-left: 1em;
+.footer__nav{
+    margin-top: 3em;
+    display: grid;
+    gap: .7em;
+}
+
+.footer__link{
+    font-size: 1.2em;
     color: var(--color-White);
-    content: "example@fylo.com";
+    font-family: var(--font-Headings);
 }
 
-.footer__text {
-    padding-top: 2em;
-    color: var(--color-White);
+.footer__link:hover{
+    text-decoration: underline;
 }
 
-.footer__aboutUs {
-    padding-bottom: 1em;
-    font-size: 1.5em;
+.footer__social{
     font-weight: 300;
-}
-
-
-.footer__social {
+    padding-top: 4em; 
     margin: 0 auto;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    padding-top: 5em;
-    padding-bottom: 2em;
+    width: max-content;
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    gap: 1em;
 }
 
-
-.footer__links {
-    margin: 0 auto;
-    border: 1px solid white;
-    border-radius: 5em;
-    display: inline-block;
-}
-
-.footer__redes {
-    display: block;
+.footer__media{
     width: 20px;
     height: 20px;
-    margin: 0.5em;
+    display: block;
+}
+
+.footer__smedia{
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+@media (min-width:768px){
+    
+    .hero__title{
+        font-size: 3rem;
+    }
+
+    .hero__paragraph{
+        font-size: 1.5em;
+    }
+
+    .cards__container{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3em;
+    }
+
+    .hero__cta {
+        cursor: pointer;
+        margin: 0 auto;
+        font-size: 1.2em;
+        font-family: var(--font-Headings);
+        font-weight: 600;
+        margin-top: 2em;
+        display: inline-block;
+        color: var(--color-White);
+        width: 300px;
+        background-image: var(--gradient);
+        padding: 20px 30px;
+        border-radius: 5em;
+        margin-bottom: 3em;
+    }
+    
+    .about__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    
+    
+    }
+    
+    .about__title{
+        font-size: 2rem;
+        text-align: left;
+        margin-top: 3em;
+        font-family: var(--font-Headings);
+    }
+
+
+    .testimony__item{
+        width: 30%;
+    }
+
+    .join__container{
+        max-width: 800px;
+    }
+
+    .join__inputs{
+        padding-top: 1em;
+        display: grid;
+        grid-template-columns: 1fr max-content;
+    }
+   
+    .footer__contact{
+        max-width: 200px; ;
+    }
+
+    .footer__content{
+       display: grid;
+       grid-auto-flow:column ;
+       gap: 2em;
+    }
+
+    .footer__nav{
+        margin-top: 0;
+    }
+    .footer__social{
+        margin:0;
+    }
+
+    .footer__direction--first::before{
+        max-width: 300px;
+    }
+    .footer__direction--second{
+        margin: 0 0 1em;
+    }
+
 }
