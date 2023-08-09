@@ -152,6 +152,7 @@ body {
 .cards__icon {
     margin: 0 auto;
     width: 25%;
+    max-width: 60px;
     display: block;
 }
 
@@ -442,11 +443,16 @@ body {
 
     .cards__container{
         display: grid;
-        justify-content: center;
-        align-items: center;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: repeat(1, auto 1fr auto);
         gap: 3em;
+    }
+    
+    .cards__item{
+        display: grid;
+        grid-row: span 3; 
+        grid-template-rows: auto 1fr auto;
+        grid-template-rows: subgrid;
     }
 
     .hero__cta {
@@ -468,9 +474,6 @@ body {
     .about__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-
-    
-    
     }
     
     .about__title{
